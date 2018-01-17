@@ -146,20 +146,6 @@ export default {
         _this.currentStationObj = data;
       });
       MetroData.getStationTime(stationName, function(timeList){
-        // let line = '-1';
-        // let time = {};
-        // for(let i = 0; i < timeList.length ; i++){
-        //   if(timeList[i].lineid == line){
-        //     time.timeList.push(timeList[i]);
-        //   }else{
-        //     line = timeList[i].lineid;
-        //     time = {
-        //       lineName : MetroData.parseLineIdToName(line) ,
-        //       timeList : [timeList[i]]
-        //     };
-        //     _this.currentStationTimeList.push(time);
-        //   }
-        // }
         _this.currentStationTimeList = timeList
       });
       this.$f7.popup('.stationDetails');
